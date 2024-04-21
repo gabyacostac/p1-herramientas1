@@ -67,6 +67,7 @@ a {
 }
 
 .header__logo {
+  height: 55px;
   padding: 1rem;
 }
 
