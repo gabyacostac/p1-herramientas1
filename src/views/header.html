@@ -1,12 +1,20 @@
-<header>
+<header class="header">
   <div>
-    <a href="./index.html"><img src="./assets/images/logotipo-blanco.png" alt="Logotipo de Imagine Dragons"></a>
+    <a href="./index.html"><img class="header__logo" src="./assets/images/logo-blanco.svg" alt="Logotipo de Imagine Dragons"></a>
   </div>
-  <nav>
-    <ul>
-      <li><a href="./bio.html">Biografía</a></li>
-      <li><a href="./discos.html">Discografía</a></li>
-      <li><a href="./links.html">Enlaces</a></li>
+  <nav class="nav">
+    <ul class="header-nav">
+      <li class="header-nav__item"><a class="header-nav__link" href="./bio.html"><i class="ri-arrow-right-up-line"></i>Biografía</a></li>
+      <li class="header-nav__item"><a class="header-nav__link" href="./discos.html"><i class="ri-arrow-right-up-line"></i>Discografía</a></li>
+      <li class="header-nav__item"><a class="header-nav__link" href="./links.html"><i class="ri-arrow-right-up-line"></i>Enlaces</a></li>
     </ul>
   </nav>
+  <div class="dropdown">
+    <button onclick="myFunction()" class="dropbtn">☰</button>
+    <div id="myDropdown" class="dropdown-content">
+      <a class="dropdown-content__link" href="./bio.html"><i class="ri-arrow-right-up-line"></i>Biografía</a>
+      <a class="dropdown-content__link" href="./discos.html"><i class="ri-arrow-right-up-line"></i>Discografía</a>
+      <a class="dropdown-content__link" href="./links.html"><i class="ri-arrow-right-up-line"></i>Enlaces</a>
+    </div>
+  </div>
 </header>

@@ -1,0 +1,272 @@
+// Selectores Universales
+
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+
+
+
+
+
+// Selectores generales
+
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+body {
+  font-family: $sans-serif;
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.5;
+  color: $dark;
+  background-color: $light;
+}
+
+a {
+  text-decoration: none;
+  color: $dark;
+}
+
+
+
+
+
+
+// Estilos header
+
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid $light;
+  position: sticky;
+  top: 0;
+  background-color: $dark;
+  z-index: 1;
+  height: 7vh;
+}
+
+.nav {
+  @media (max-width: $mq-tablet) {
+    display: none;
+  }
+}
+
+.header-nav {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.header-nav__item {
+  list-style-type: none;
+  padding: 1rem;
+}
+
+.header-nav__link {
+  font-weight: bold;
+  color: $light;
+  text-decoration: underline solid $light 2px;
+  text-underline-offset: 2px;
+  font-size: 1.3rem;
+  line-height: 1.1;
+}
+
+.header-nav__link:hover {
+  color: $overlay-light;
+  text-decoration: underline solid $overlay-light 2px;
+  transition: 0.2s;
+}
+
+.header__logo {
+  padding: 1rem;
+}
+
+.dropbtn {
+  background-color: $dark;
+  color: $light;
+  border: none;
+  font-size: 2rem;
+}
+
+.dropdown {
+  display: none;
+  position: relative;
+  float: right;
+  padding-right: 1rem;
+
+  @media (max-width: $mq-tablet) {
+    display: inline-block;
+  }
+}
+
+.dropbtn:hover, .dropbtn:focus {
+  color: $overlay-light;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  z-index: 1;
+  right: 0;
+}
+
+.dropdown-content__link {
+  color: $dark;
+  font-size: 2rem;
+  text-align: right;
+  padding: 1rem 2rem;
+  text-decoration: underline solid $dark 2px;
+  font-weight: bold;
+  display: block;
+  background-color: $light;
+}
+
+.dropdown-content__link:hover {
+  color: $light;
+  text-decoration: underline solid $light 2px;
+  background-color: $dark;
+}
+
+.show { display:block; }
+
+
+
+
+
+
+// Estilos portada
+
+
+.cover {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.cover__background {
+  background-image: linear-gradient(to top, $dark, rgb(0 0 0 / 0%)), url("/src/assets/images/home-background.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+}
+
+.cover__title {
+  padding: 2rem;
+
+  @media (max-width: $mq-tablet) {
+    display: none;
+  }
+}
+
+.cover__title--responsive {
+  padding: 2rem;
+  display: none;
+
+  @media (max-width: $mq-tablet) {
+    display: block;
+  }
+}
+
+.cover-nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem;
+
+  @media (max-width: $mq-tablet) {
+    flex-direction: column;
+    gap: 2rem;
+  }
+}
+
+.cover-nav__item {
+  list-style-type: none;
+}
+
+.cover-nav__link {
+  font-weight: bold;
+  color: $light;
+  text-decoration: underline solid $light 5px;
+  text-underline-offset: 5px;
+  font-size: 3.5rem;
+  line-height: 1.1;
+
+  @media (max-width: $mq-laptop) {
+    font-size: 2.5rem;
+    text-decoration: underline solid $light 4px;
+    text-underline-offset: 4px;
+  }
+}
+
+.cover-nav__link:hover {
+  color: $overlay-light;
+  text-decoration: underline solid $overlay-light 5px;
+  transition: 0.2s;
+}
+
+
+
+
+
+
+
+
+// Estilos Footer
+
+
+.footer {
+  height: 15vh;
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid $light;
+  background-color: $dark;
+  align-items: flex-end;
+  padding: 1rem;
+  height: 13vh;
+}
+
+.footer-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.7rem;
+}
+
+.footer-links__item {
+  list-style-type: none;
+}
+
+.footer-links__link {
+  font-weight: bold;
+  color: $light;
+  text-decoration: underline solid $light 1px;
+  font-size: 0.8rem;
+  line-height: 1.1;
+}
+
+.footer-links__link-social {
+  color: $light;
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+.footer__logo {
+  height: 50px;
+  width: auto;
+}

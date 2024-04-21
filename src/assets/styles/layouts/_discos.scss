@@ -1,0 +1,73 @@
+// Estilos Discos
+
+
+.categ-hero {
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-image: linear-gradient(to top, $dark, rgb(0 0 0 / 0%)), url("/src/assets/images/discos-brackground.webp");
+}
+
+.categ-hero__item {
+  padding: 1rem;
+}
+
+.categ-hero__link {
+  @media (max-width: $mq-tablet) {
+    font-size: 2rem;  
+  }
+}
+
+.categ-nav {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1rem;
+
+  @media (max-width: $mq-tablet) {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.detalle-disco {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  border-bottom: 3px solid $dark;
+
+  @media (max-width: $mq-tablet) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.detalle-disco:last-child {
+  border-bottom: none;
+}
+
+.detalle-disco__title {
+  padding: 1rem;
+  border-bottom: 2px solid $dark;
+  background-color: $light;
+  color: $dark;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: space-between;
+}
+
+.detalle-disco__link {
+  text-decoration: underline solid $dark 2px;
+}
+
+.detalle-disco__link:hover {
+  color: $overlay-dark;
+  text-decoration: underline solid $overlay-dark 2px;
+  transition: 0.2s;
+}
+
+.detalle-disco__item {
+  padding: 1rem;
+  border-bottom: 1px solid $dark;
+  background-color: $light;
+  color: $dark;
+  display: flex;
+  justify-content: space-between;
+}

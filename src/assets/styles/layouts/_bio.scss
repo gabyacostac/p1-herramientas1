@@ -1,0 +1,140 @@
+// Estilos Bio
+
+
+.hero {
+  height: 80vh;
+  background-image: linear-gradient(to bottom, $dark, rgb(0 0 0 / 0%)), url("/src/assets/images/bio-hero.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.hero__item {
+  color: $light;
+  text-transform: uppercase;
+  padding: 1rem;
+  font-weight: bold;
+  border-block: 1px solid $light;
+}
+
+.hero__quote {
+  font-size: 10rem;
+  line-height: 0.8;
+
+  @media (max-width: $mq-tablet) {
+    font-size: 6rem;
+    line-height: 0.9;
+  }
+}
+
+.section__title {
+  padding: 1rem;
+  border-block: 1px solid $light;
+  background-color: $dark;
+  color: $light;
+  text-transform: uppercase;
+}
+
+.section__content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: 
+    "img1 text1"
+    "text2 img2"
+    ;
+
+  @media (max-width: $mq-tablet) {
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+      "img1"
+      "text1"
+      "img2"
+      "text2";
+  }
+}
+
+.text1 {
+  grid-area: text1;
+}
+
+.text2 {
+  grid-area: text2;
+}
+
+.img1 {
+  grid-area: img1;
+}
+
+.img2 {
+  grid-area: img2;
+}
+
+.section__text {
+  padding: 1rem;
+}
+
+.section__image {
+  height: 100%;
+  object-fit: cover;
+}
+
+.disco {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+
+  @media (max-width: $mq-tablet) {
+    grid-template-columns: 1fr 1fr;
+    padding-top: 2rem;
+
+    @media (max-width: $mq-phone) {
+      grid-template-columns: 1fr;
+    }
+  }
+}
+
+.disco__cover {
+  position: relative;
+}
+
+.disco__background {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: $overlay-dark;
+}
+
+.disco__background:hover {
+  opacity: 1;
+} 
+
+.disco__text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.disco__link {
+  color: $dark;
+  padding: 1rem 2rem;
+  background-color: $light;
+}
+
+.large-text {
+  font-size: 2rem;
+  line-height: 1.2;
+}
+
+.section__text p {
+  padding-bottom: 1rem;
+}

@@ -1,0 +1,22 @@
+@use "sass:color";
+
+
+// TIPOGRAFÍAS
+$sans-serif: -apple-system, "Segoe UI", "Helvetica Neue", arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+$serif: "Georgia", "Times New Roman", serif;
+
+
+// COLORES
+$light: #f5f5f5;
+$dark: #0B1215;
+$grey: color.scale($dark, $lightness: 70%);
+$overlay-dark: color.scale($dark, $alpha: -30%);
+$overlay-light: color.scale($light, $alpha: -30%);
+
+
+// BREAKPOINTS
+$mq-phone: 425px;
+$mq-tablet: 768px;
+$mq-laptop: 1024;
+$mq-laptop-large: 1440px;
+$mq-pc: 1920px;

@@ -1,0 +1,79 @@
+// Estilos Detalle
+
+
+.detalle {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-bottom: 3px solid $dark;
+
+  @media (max-width: $mq-tablet) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.detalle__content {
+  display: flex;
+  flex-direction: column;
+}
+
+.detalle__tracks {
+  display: flex; 
+  flex-direction: column;
+  overflow-y: scroll;
+  height: 70vh;
+  flex-grow: 1;
+}
+
+.detalle-disco__cover {
+  position: relative;
+}
+
+.back-text {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+}
+
+.info-disco {
+  border-bottom: 2px solid $dark;
+}
+
+.info-disco__text {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  @media (max-width: $mq-tablet) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.card-group {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+
+  @media (max-width: $mq-laptop) {
+    grid-template-columns: 1fr 1fr;
+
+    @media (max-width: $mq-tablet) {
+      grid-template-columns: 1fr;
+    }
+  }
+}
+
+.card {
+  position: relative;
+}
+
+.card__title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  background-color: $dark;
+  padding: 1rem 2rem;
+}
+
+.card__link {
+  color: $light;
+}

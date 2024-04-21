@@ -1,0 +1,9 @@
+// Importamos el fichero donde almacenaremos nuestras variables de estilo
+@import "variables";
+
+// Importamos las hojas de estilo de las diferentes páginas de la web
+@import "layouts/index";
+@import "layouts/discos";
+@import "layouts/bio";
+@import "layouts/evolve";
+@import "layouts/links";
