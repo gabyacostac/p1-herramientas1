@@ -52,7 +52,7 @@ a {
   position: sticky;
   top: 0;
   background-color: $dark;
-  z-index: 1;
+  z-index: 3;
   height: 7vh;
 }
 
@@ -153,10 +153,11 @@ a {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  position: relative;
 }
 
 .cover__background {
-  background-image: linear-gradient(to top, $dark, rgb(0 0 0 / 0%)), url("/src/assets/images/home-background.jpg");
+  background-image: linear-gradient(to top, $dark, rgb(0 0 0 / 30%)), url("/src/assets/images/home-background.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
@@ -165,6 +166,7 @@ a {
 
 .cover__title {
   padding: 2rem;
+  z-index: 2;
 
   @media (max-width: $mq-tablet) {
     display: none;
@@ -174,10 +176,15 @@ a {
 .cover__title--responsive {
   padding: 2rem;
   display: none;
+  z-index: 2;
 
   @media (max-width: $mq-tablet) {
     display: block;
   }
+}
+
+.cover-nav-cont {
+  z-index: 1;
 }
 
 .cover-nav {
@@ -216,7 +223,23 @@ a {
   transition: 0.2s;
 }
 
+.image-clipped-1 {
+  z-index: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  clip-path: polygon(66% 12%, 68% 8%, 74% 8%, 79% 18%, 80% 23%, 82% 25%, 82% 32%, 85% 33%, 90% 36%, 95% 40%, 97% 53%, 96% 60%, 91% 64%, 91% 69%, 91% 75%, 91% 82%, 94% 92%, 93% 98%, 8% 99%, 7% 95%, 4% 91%, 4% 85%, 6% 82%, 6% 76%, 7% 69%, 9% 62%, 9% 56%, 12% 50%, 16% 43%, 19% 39%, 25% 35%, 24% 31%, 25% 26%, 25% 19%, 27% 12%, 32% 9%, 38% 10%, 41% 20%, 39% 36%, 42% 31%, 44% 28%, 43% 23%, 42% 19%, 43% 16%, 42% 12%, 42% 5%, 45% 3%, 47% 0%, 51% 0%, 53% 0%, 56% 4%, 57% 9%, 57% 15%, 57% 17%, 57% 22%, 56% 27%, 58% 29%, 61% 30%, 63% 32%, 62% 26%, 63% 22%, 64% 15%);
 
+  @media (max-width: $mq-laptop) {
+    clip-path: polygon(67% 41%, 75% 42%, 82% 46%, 82% 50%, 82% 52%, 80% 56%, 87% 58%, 91% 61%, 99% 65%, 100% 79%, 98% 97%, 98% 100%, 2% 99%, 0% 82%, 1% 79%, 0 72%, 1% 64%, 19% 59%, 16% 56%, 15% 50%, 16% 43%, 21% 41%, 27% 40%, 35% 42%, 41% 48%, 42% 55%, 39% 58%, 45% 61%, 51% 62%, 57% 59%, 54% 53%, 54% 47%, 60% 42%);
+    top: 30%;
+
+    @media (max-width: $mq-phone) {
+      top: 50%;
+    }
+  }
+}
 
 
 

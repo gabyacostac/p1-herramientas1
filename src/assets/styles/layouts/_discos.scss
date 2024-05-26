@@ -6,7 +6,11 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background-image: linear-gradient(to top, $dark, rgb(0 0 0 / 0%)), url("/src/assets/images/discos-brackground.webp");
+  background-image: linear-gradient(to top, $dark, rgb(0 0 0 /40%)), url("/src/assets/images/discos-brackground.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 .categ-hero__item {

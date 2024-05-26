@@ -3,7 +3,7 @@
 
 .hero {
   height: 80vh;
-  background-image: linear-gradient(to bottom, $dark, rgb(0 0 0 / 0%)), url("/src/assets/images/bio-hero.png");
+  background-image: linear-gradient(to bottom, $dark, rgb(0 0 0 / 0%)), url("/src/assets/images/bio-hero.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
@@ -29,6 +29,73 @@
     font-size: 6rem;
     line-height: 0.9;
   }
+}
+
+.now-playing {
+  width: 10rem;
+}
+
+.quote__container {
+  display: flex;
+  justify-content: space-between;
+  gap: 4rem;
+
+  @media (max-width: $mq-tablet) {
+    gap: 0;
+
+    @media (max-width: $mq-phone) {
+      flex-direction: column;
+    }
+  }
+}
+
+.quote__icon {
+  align-self: flex-end;
+
+  @media (max-width: $mq-phone) {
+    align-self: flex-start;
+  }
+}
+
+@keyframes bounce {
+  10% {
+    transform: scaleY(0.3);
+  }
+
+  30% {
+    transform: scaleY(1); 
+  }
+
+  60% {
+    transform: scaleY(0.5);
+  }
+
+  80% {
+    transform: scaleY(0.75);
+  }
+
+  100% {
+    transform: scaleY(0.6);
+  }
+}
+
+.cls-1 {
+  fill: #fff;
+  stroke-width: 0px;
+  transform-origin: bottom;
+  animation: bounce 2.2s ease infinite alternate;
+}
+
+.cls-1:nth-of-type(2) {
+  animation-delay: -2.2s; /* Start mid-way of return of animation */
+}
+
+.cls-1:nth-of-type(3) {
+  animation-delay: -3.7s; /* Start mid-way of return of animation */
+}
+
+.cls-1:nth-of-type(4) {
+  animation-delay: -4.5s; /* Start mid-way of return of animation */
 }
 
 .section__title {
