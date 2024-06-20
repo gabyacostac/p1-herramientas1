@@ -17,5 +17,3 @@ window.onclick = function(event) {
     }
   }
 }
-
-import 'remixicon/fonts/remixicon.css'

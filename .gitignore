@@ -1,1 +1,8 @@
 node_modules
+dist
+.cache
+.parcel-cache
+.sass-cache/
+.npm
+package.lock.json
+.cache/
